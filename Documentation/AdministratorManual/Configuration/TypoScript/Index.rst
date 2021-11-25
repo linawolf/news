@@ -806,7 +806,7 @@ displayDummyIfNoMedia
          The placeholder itself is defined with TypoScript::
 
            plugin.tx_news.settings {
-              list.media.dummyImage = typo3conf/ext/news/Resources/Public/Images/dummy-preview-image.png
+              list.media.dummyImage = typo3conf/ext/news/Resources/Public/Images/ManualScreenshots/dummy-preview-image.png
            }
 
    Default
