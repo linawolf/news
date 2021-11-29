@@ -47,7 +47,7 @@
 .. :align: left
 .. :name: Contentelement relation
 
-.. |img-admin-module-guide|      image:: /Images/ManualScreenshots/Administration/admin-module-guide.png
+.. |img-admin-module-guide|      image:: /Images/ManualScreenshots/Misc/Changelog/6-0-0/admin-module-guide.png
 .. :border: 0
 .. :align: left
 .. :name: Support of EXT:guide for the administration module

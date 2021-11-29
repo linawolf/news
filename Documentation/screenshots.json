@@ -1,0 +1,53 @@
+{
+    "suites": {
+        "News": {
+            "screenshots": {
+                "_default": [
+                    {"action": "resizeWindow", "width": 1024, "height": 768},
+					{"action": "setScreenshotsImagePath", "path": "Images/AutomaticScreenshots"},
+					{"action": "setScreenshotsRstPath", "path": "Images/AutomaticScreenshots"}
+				],
+                "actionsIdentifierSitePackageBackend": [
+                    {"include": "_default"},
+
+					{"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][0]=new&id=0&table=&pointer=1&defVals[pages][title]=example.org&defVals[pages][is_siteroot]=1&defVals[pages][hidden]=0&token=x"},
+					{"action": "click", "link": "Save"},
+					{"action": "waitForText", "text": "Edit Page"},
+					{"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][1]=new&id=0&table=&pointer=1&defVals[pages][title]=News Storage&defVals[pages][doktype]=254&defVals[pages][module]=news&defVals[pages][hidden]=0&token=x"},
+					{"action": "click", "link": "Save"},
+					{"action": "waitForText", "text": "Edit Page"},
+					{"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][1]=new&id=0&table=&pointer=1&defVals[pages][title]=Display News&defVals[pages][module]=newsplugins&defVals[pages][hidden]=0&token=x"},
+					{"action": "click", "link": "Save"},
+					{"action": "waitForText", "text": "Edit Page"},
+					{"action": "amOnPage", "page": "/typo3/record/edit?edit[pages][1]=new&id=0&table=&pointer=1&defVals[pages][title]=Some page&defVals[pages][hidden]=0&token=x"},
+					{"action": "click", "link": "Save"},
+					{"action": "waitForText", "text": "Edit Page"},
+					{"action": "amOnPage", "page": "/typo3/record/edit?edit[sys_template][1]=new&id=0&table=&pointer=1&defVals[sys_template][title]=Main TypoScript Rendering&defVals[sys_template][root]=1s&defVals[sys_template][include_static_file]=EXT%3Afluid_styled_content%2FConfiguration%2FTypoScript%2F%2CEXT%3Anews%2FConfiguration%2FTypoScript&defVals[sys_template][hidden]=0&token=x"},
+					{"action": "click", "link": "Save"},
+					{"action": "waitForText", "text": "Edit Template"},
+					{"comment": "The following does not work, issue: https://github.com/georgringer/news/issues/1662 \n\t\t\t\t\t{\"action\": \"amOnPage\", \"page\": \"/typo3/record/edit?edit[tx_news_domain_model_news][2]=new&id=0&table=&pointer=1&defVals[tx_news_domain_model_news][title]=Example News&defVals[tx_news_domain_model_news][hidden]=0&token=x\"},\n\t\t\t\t\t{\"action\": \"click\", \"link\": \"Save\"},\n\t\t\t\t\t{\"action\": \"waitForText\", \"text\": \"Edit News\"},{\"action\": \"amOnPage\", \"page\": \"/typo3/record/edit?edit[tx_news_domain_model_news][2]=new&id=0&table=&pointer=1&defVals[tx_news_domain_model_news][title]=News as external Link&defVals[tx_news_domain_model_news][type]=1&defVals[tx_news_domain_model_news][hidden]=0&token=x\"},\n\t\t\t\t\t{\"action\": \"click\", \"link\": \"Save\"},\n\t\t\t\t\t{\"action\": \"waitForText\", \"text\": \"Edit News\"},\n\t\t\t\t\t{\"action\": \"amOnPage\", \"page\": \"/typo3/record/edit?edit[tx_news_domain_model_news][2]=new&id=0&table=&pointer=1&defVals[tx_news_domain_model_news][title]=News as internal Link&defVals[tx_news_domain_model_news][type]=2&defVals[tx_news_domain_model_news][hidden]=0&token=x\"},\n\t\t\t\t\t{\"action\": \"click\", \"link\": \"Save\"},"},
+					{"action": "goToModule", "module": "News Administration", "path": ["example.org", "News Storage"]},
+					{"action": "waitForText", "text": "News administration"},
+					{"action": "makeScreenshotOfWindow", "fileName": "AdminModule"},
+					{"action": "resizeWindow", "width": 1024, "height": 200},
+					{"action": "switchToMainFrame"},
+					{"action": "see", "text": "News administration"},
+					{"action": "switchToContentFrame"},
+					{"action": "drawBox", "selector": "a[data-title=\"Create a new category\"]"},
+					{"action": "drawBadge", "selector": "a[data-title=\"Create a new category\"]", "label":  "Create a new category", "position": "bottom"},
+					{"action": "makeScreenshotOfWindow", "fileName": "AddCategoryInAdminModule"},
+					{"action": "resizeWindow", "width": 768, "height": 640},
+					{"action": "amOnPage", "page": "/typo3/record/edit?edit[category][2]=new&defVals[category][title]=My Category&defVals[category][hidden]=0&token=x"},
+					{"action": "makeScreenshotOfWindow", "fileName": "CreateCategory"},
+					{
+						"action": "goToRecord",
+						"table": "sys_template",
+						"uid": 1
+					},
+					{"action": "click", "link": "Includes"},
+					{"action": "makeScreenshotOfWindow", "fileName": "NewsIncludeTypoScript"}
+				]
+            }
+        }
+    }
+}
