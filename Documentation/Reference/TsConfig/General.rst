@@ -77,9 +77,9 @@ slugPrefix
    Configure the prefix shown before the slug field of the news record.
    The following options are available:
 
-      - `none`: No prefix is shown
-      - `default`: Default behaviour of the slug prefix which is the domain
-      - An integer: URL to the detail page
+   - `none`: No prefix is shown
+   - `default`: Default behaviour of the slug prefix which is the domain
+   - An integer: URL to the detail page
 
 Example: Show url to a detail page
 ----------------------------------
