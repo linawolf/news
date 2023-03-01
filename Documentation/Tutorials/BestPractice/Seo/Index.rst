@@ -36,6 +36,11 @@ It can be configured using TypoScript:
          properties = teaser,title
       }
    }
+   
+..  note:: 
+    Setting the page title via title provider only works if the output of the automatic 
+    page titles is not disabled. The following TypoScript option: :ref:`t3tsref:setup-config-nopagetitle`
+    must not be set to a value greater 0.
 
 It is also possible to set the page title through the template by using:
 
