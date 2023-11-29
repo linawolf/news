@@ -20,6 +20,7 @@ a site package extension, see
 :doc:`Official Tutorial: Site Package <t3sitepackage:Index>` for this purpose.
 
 .. code-block:: typoscript
+   :caption: EXT:my_sitepackage/Configuration/page.tsconfig
 
    TCEMAIN.preview {
       tx_news_domain_model_news {
@@ -45,3 +46,17 @@ If a news plugin is placed on this page, the news article will be shown.
    kind of parameters. Read more about it in
    :ref:`TSconfig Reference: TCEMAIN.preview <t3tsconfig:pagetcemain-preview>`.
 
+Preview hidden and other non-visible news records
+=================================================
+
+If you also want to preveiw hidden news records, use the setting 
+:confval:`previewHiddenRecords` in your TypoScript setup configuration:
+
+.. code-block:: typoscript
+   :caption: EXT:my_sitepackage/Configuration/TypoScript/setup.typoscript
+
+   plugin.tx_news.settings.previewHiddenRecords = 1
+
+Use a single view plugin on a page that is secured from non-admin users, for example by
+Using the page type :guilabel:`Backend User Section`. Or by making the page availible
+to authorisized frontend users only.
